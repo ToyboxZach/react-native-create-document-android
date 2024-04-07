@@ -9,15 +9,7 @@ You may need this functionality if you have to access device folders in an appli
 ## Installation
 
 ```bash
-npm install react-native-create-document-android --save
-```
-
-## Add it to your android project
-
-- Automatically with:
-
-```bash
-react-native link react-native-create-document-android
+npm i react-native-create-document-android
 ```
 
 ## Example
@@ -44,9 +36,6 @@ const testCreateDocument = () => {
 ## Example app
 
 <https://github.com/jjorda/react-native-create-document-android-example>
-
-![example image 1](https://github.com/jjorda/react-native-create-document-android/blob/main/image1.jpg?raw=true)
-![example image 2](https://github.com/jjorda/react-native-create-document-android/blob/main/image2.jpg?raw=true)
 
 ## License
 
