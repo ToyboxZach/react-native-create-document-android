@@ -1,0 +1,8 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.jjorda.rncreatedocument">
+    <application>
+        <service
+            android:name=".RNCreateDocument"
+            android:exported="true" />
+    </application>
+</manifest>
