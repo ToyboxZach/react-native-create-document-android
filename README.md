@@ -18,8 +18,8 @@ npm i react-native-create-document-android
 const FILE_CONTENT = 'some words in android file';
 
 const callback = (uri: string) => {
-  console.log('Saving file contazara into: ' + uri);
-  writeFile(uri, FILE_CONTENT);
+  console.log('Saving file into: ' + uri);
+  writeFile(uri, FILE_CONTENT); 
 };
 
 const testCreateDocument = () => {
