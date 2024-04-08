@@ -15,6 +15,9 @@ npm i react-native-create-document-android
 ## Example
 
 ```javascript
+
+import {createDocument} from 'react-native-create-document-android';
+
 const FILE_CONTENT = 'some words in android file';
 
 const callback = (uri: string) => {
