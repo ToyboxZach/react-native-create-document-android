@@ -1,6 +1,6 @@
 {
   "name": "react-native-create-document-android",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React Native Android module to use the intent ACTION_CREATE_DOCUMENT",
   "main": "index.js",
   "scripts": {

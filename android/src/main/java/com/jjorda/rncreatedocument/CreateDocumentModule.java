@@ -18,6 +18,7 @@ public class CreateDocumentModule extends ReactContextBaseJavaModule {
 
   private ReactApplicationContext reactContext;
   private Callback mCallback;
+  private static final int REQUEST_CODE = 800001;
 
   public CreateDocumentModule(ReactApplicationContext reactContext) {
     super(reactContext);
@@ -38,13 +39,13 @@ public class CreateDocumentModule extends ReactContextBaseJavaModule {
     intent.setType("*/*");
     intent.putExtra(Intent.EXTRA_TITLE, name);
     Activity currentActivity = getCurrentActivity();
-    currentActivity.startActivityForResult(intent, 0);
+    currentActivity.startActivityForResult(intent, REQUEST_CODE);
   }
 
   private final ActivityEventListener mActivityEventListener = new BaseActivityEventListener() {
     @Override
     public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent data) {
-      if (data != null) {
+      if (requestCode == REQUEST_CODE && data != null) {
         Uri uri = data.getData();
         mCallback.invoke(uri.toString());
       }
