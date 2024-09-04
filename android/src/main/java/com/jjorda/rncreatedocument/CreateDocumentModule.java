@@ -32,11 +32,11 @@ public class CreateDocumentModule extends ReactContextBaseJavaModule {
   }
 
   @ReactMethod
-  public void createDocument(String name, Callback callback) {
+  public void createDocument(String name, String type, Callback callback) {
     mCallback = callback;
     Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
     intent.addCategory(Intent.CATEGORY_OPENABLE);
-    intent.setType("*/*");
+    intent.setType(type);
     intent.putExtra(Intent.EXTRA_TITLE, name);
     Activity currentActivity = getCurrentActivity();
     currentActivity.startActivityForResult(intent, REQUEST_CODE);
