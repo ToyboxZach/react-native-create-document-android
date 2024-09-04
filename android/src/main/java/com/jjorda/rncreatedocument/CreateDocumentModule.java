@@ -42,6 +42,14 @@ public class CreateDocumentModule extends ReactContextBaseJavaModule {
     currentActivity.startActivityForResult(intent, REQUEST_CODE);
   }
 
+   public void pickDirectory(Callback callback) {
+    mCallback = callback;
+    Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE);
+    intent.addCategory(Intent.CATEGORY_OPENABLE);
+    Activity currentActivity = getCurrentActivity();
+    currentActivity.startActivityForResult(intent, REQUEST_CODE);
+  }
+
   private final ActivityEventListener mActivityEventListener = new BaseActivityEventListener() {
     @Override
     public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent data) {
